@@ -1,14 +1,17 @@
-import React from "react";
+// import React, {} from "react";
 import Signup from "./signUp";
 import { AuthProvider } from "../contexts/AuthContext";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import Dashboard from "./Dashboard"; // Assuming you have a Dashboard component
 import Login from "./Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import TeachersHome from "./Teachers/Home";
+import StudentsHome from "./Students/Home";
 
 
 function App() {
+  
   return (
     <Router>
       <AuthProvider>
@@ -18,10 +21,11 @@ function App() {
         >
           <div className="w-100" style={{ maxWidth: "400px" }}>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              {/* Assuming Signout is handled differently, not as a route */}
+              <Route path="/Teachers/Home" element={<TeachersHome />} />
+              <Route path="/Students/Home" element={<StudentsHome />} /> 
             </Routes>
           </div>
         </Container>
