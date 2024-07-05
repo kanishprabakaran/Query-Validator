@@ -28,7 +28,7 @@ function NavigationBar() {
       >
         <NavItem>
           <Link to="/" className="text-white">
-            JSOM
+            XData
           </Link>
         </NavItem>
         <NavbarToggler onClick={toggle} style={{ width: 'auto' }} />
@@ -49,7 +49,7 @@ function NavigationBar() {
                   }`}
                 >
                   {' '}
-                  Authors
+                  Problems
                 </p>
               {/* </Link> */}
             </NavItem>
@@ -64,7 +64,7 @@ function NavigationBar() {
                   }`}
                 >
                   {' '}
-                  MostLikedPost
+                  IDE
                 </p>
               {/* </Link> */}
             </NavItem>
@@ -79,7 +79,7 @@ function NavigationBar() {
                   }`}
                 >
                   {' '}
-                  MostCommentPost
+                  Profile
                 </p>
               {/* </Link> */}
             </NavItem>
