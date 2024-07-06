@@ -5,8 +5,9 @@
     padding: 20px !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
     max-width: 400px !important;
-    margin: 0 auto !important;
+    margin: auto auto !important;
 }
+
 
 .Signup-button {
     background-color: #535252 !important;

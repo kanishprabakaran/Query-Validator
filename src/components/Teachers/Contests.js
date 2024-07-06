@@ -1,9 +1,9 @@
 import NavigationBarTeacher from '../NavBar/NavigationBarTeacher';
-export default function TeachersHome() {
+export default function TeachersContests() {
     return (
       <>
       <NavigationBarTeacher/>
-      <h1>Welcome Teacher This is the Home page</h1>
+      <h1>Welcome Teacher This is the Contests page</h1>
       </>
     );
 }

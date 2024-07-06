@@ -1,9 +1,9 @@
 import NavigationBarStudent from '../NavBar/NavigationBarStudent';
-export default function StudentHome() {
+export default function StudentContests() {
     return (
       <>
       <NavigationBarStudent/>
-      <h1>Welcome Student This is the Home page</h1>
+      <h1>Welcome Student This is the Contests Page Check this out</h1>
       </>
     );
 }

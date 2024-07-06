@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import {
   Collapse,
   Navbar,
@@ -9,7 +9,7 @@ import {
 import './NavigationBar.css';
 import { Link } from 'react-router-dom';
 
-function NavigationBar() {
+function NavigationBarTeacher() {
   let pathName = useMemo(
     () => window.location.pathname,
     [window.location.pathname],
@@ -27,7 +27,7 @@ function NavigationBar() {
         expand="md"
       >
         <NavItem>
-          <Link to="/" className="text-white">
+          <Link to="/Teachers/Home" className="text-white">
             XData
           </Link>
         </NavItem>
@@ -42,7 +42,7 @@ function NavigationBar() {
         >
           <Nav className="ml-auto" navbar>
             <NavItem>
-              {/* <Link to="/" onClick={toggle}> */}
+              <Link to="/Teachers/Problems" onClick={toggle}> 
                 <p
                   className={`m-2 ${
                     !!!pathName.split('/')[1] ? 'text-white' : 'text-secondary '
@@ -51,11 +51,25 @@ function NavigationBar() {
                   {' '}
                   Problems
                 </p>
-              {/* </Link> */}
+               </Link> 
+            </NavItem>
+            <NavItem>
+            <Link to="/Teachers/Contests" onClick={toggle}>
+                <p
+                  className={` m-2 ${
+                    pathName.split('/')[1] === 'MostCommentPost'
+                      ? 'text-white'
+                      : 'text-secondary'
+                  }`}
+                >
+                  {' '}
+                  Contests
+                </p>
+              </Link> 
             </NavItem>
 
             <NavItem>
-              {/* <Link to="/MostLikedPost" onClick={toggle}> */}
+              <Link to="/Teachers/IDE" onClick={toggle}>
                 <p
                   className={`m-2 ${
                     pathName.split('/')[1] === 'MostLikedPost'
@@ -66,11 +80,10 @@ function NavigationBar() {
                   {' '}
                   IDE
                 </p>
-              {/* </Link> */}
+              </Link> 
             </NavItem>
-
             <NavItem>
-              {/* <Link to="/MostCommentPost" onClick={toggle}> */}
+            <Link to="/Teachers/Profile" onClick={toggle}>
                 <p
                   className={` m-2 ${
                     pathName.split('/')[1] === 'MostCommentPost'
@@ -81,7 +94,7 @@ function NavigationBar() {
                   {' '}
                   Profile
                 </p>
-              {/* </Link> */}
+              </Link> 
             </NavItem>
           </Nav>
         </Collapse>
@@ -90,4 +103,4 @@ function NavigationBar() {
   );
 }
 
-export default NavigationBar;
+export default NavigationBarTeacher;
