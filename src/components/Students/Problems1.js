@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import './Problems.css';
 
 export default function StudentContests() {
-  
   const blogPosts = [
       {
           title: 'SQL Master Challenge',
@@ -62,35 +61,23 @@ export default function StudentContests() {
   ];
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [dateFilter, setDateFilter] = useState(''); // Step 1: Add state for date filter
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
 
   useEffect(() => {
       setFilteredPosts(
-        
-          blogPosts.filter(post =>{
-              const postDate = new Date(post.date);
-              console.log("this is",postDate)
-              const filterDate = dateFilter ? new Date(dateFilter) : null;
-              console.log(filterDate)
-              const matchesDate = filterDate ? 
-    (new Date(postDate.setHours(0, 0, 0, 0)).getTime() === new Date(filterDate.setHours(0, 0, 0, 0)).getTime()) : 
-    true;
-              return (
-              (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              post.description.toLowerCase().includes(searchQuery.toLowerCase()) )&&
-              matchesDate
-            );
-  })  
+          blogPosts.filter(post =>
+              post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              post.description.toLowerCase().includes(searchQuery.toLowerCase())
+          )
       );
-  }, [searchQuery,dateFilter]);
-  
+  }, [searchQuery]);
+
   return (
       <main className="content">
           <NavigationBarStudent />
           <header className="blog-header">
               <h1>Problems</h1>
-              <p>Your journey to become a DBMS wizard starts here! </p>
+              <p>Contest every week. Complete and see your ranking!</p>
               <div className="tabs">
                   <span className="tab active">Database</span>
                   <span className="tab">Queries</span>
@@ -101,24 +88,14 @@ export default function StudentContests() {
                   <span className="tab">Normalization</span>
                   <span className="tab">Functions</span>
               </div>
-
-              <div className="input-container">
-    <input
-        type="text"
-        className="search-bar"
-        placeholder="Search..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-    />
-    <input
-        type="date"
-        className="date-filter"
-        value={dateFilter}
-        onChange={(e) => setDateFilter(e.target.value)}
-    />
-</div>
+              <input
+                  type="text"
+                  className="search-bar"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+              />
           </header>
-          
           <section className="blog-section">
               {filteredPosts.map((post, index) => (
                   <div key={index} className="blog-card">
@@ -132,7 +109,7 @@ export default function StudentContests() {
                           <span>{post.date}</span> &middot; <span>{post.readTime}</span>
                       </div>
                       <div className="blog-card-action">
-                          <button className="join-contest-button">Submit Solution</button>
+                          <button className="join-contest-button">Join Contest</button>
                       </div>
                   </div>
               ))}
