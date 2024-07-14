@@ -9,7 +9,7 @@ html, body {
     overflow-x: hidden;
 }
 
-.content {
+.content-problems {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,23 +18,23 @@ html, body {
     box-sizing: border-box;
 }
 
-.blog-header {
+.blog-header-problems {
     text-align: center;
     margin-bottom: 20px;
     width: 100%;
 }
 
-.blog-header h1 {
+.blog-header-problems h1 {
     font-size: 2.5em;
     margin: 0;
 }
 
-.blog-header p {
+.blog-header-problems p {
     font-size: 1.2em;
     margin: 10px 0 20px;
 }
 
-.tabs {
+.tabs-problems {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -42,7 +42,7 @@ html, body {
     flex-wrap: wrap;
 }
 
-.tab {
+.tab-problems {
     cursor: pointer;
     padding: 10px 15px;
     background-color: #e0e0e0;
@@ -50,18 +50,18 @@ html, body {
     transition: background-color 0.3s;
 }
 
-.tab.active {
+.tab-problems.active {
     background-color: #cccccc;
 }
 
-.tab:hover {
+.tab-problems:hover {
     background-color: #d0d0d0;
 }
 
-.search-bar {
+.search-bar-problems {
     /* display: block; */
     margin: 0 0 0 0 ;
-    /* padding: 10px; */
+    padding: 10px;
     font-size: 1em;
     width: 100%;
     border-radius: 5px;
@@ -70,7 +70,7 @@ html, body {
     color: #333333;
 }
 
-.blog-section {
+.blog-section-problems {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -78,7 +78,7 @@ html, body {
     width: 100%;
 }
 
-.blog-card {
+.blog-card-problems {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -92,14 +92,14 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
 }
-.input-container {
+.input-container-problems {
     margin: 0 auto ;
     display:flex;
     width:30%;
     align-items: center; 
     gap: 10px !important; /* Adjusts the space between the inputs */
 }
-.date-filter {
+.date-filter-problems {
     background-color: #f0f0f0; /* Light grey background */
     border: 1px solid #ccc; /* Light grey border */
     border-radius: 4px; /* Rounded corners */
@@ -110,35 +110,35 @@ html, body {
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.date-filter:hover {
+.date-filter-problems:hover {
     border-color: #888; /* Darker border on hover */
 }
 
-.date-filter:focus {
+.date-filter-problems:focus {
     border-color: #0056b3; /* Blue border for focus */
     box-shadow: 0 0 0 2px rgba(0,86,179,0.25); /* Adds a glow effect on focus */
 }
-.blog-card-header h2 {
+.blog-card-header-problems h2 {
     font-size: 1.25em;
     margin: 0;
     color: #333333;
 }
 
-.blog-card-body p {
+.blog-card-body-problems p {
     margin: 10px 0;
 }
 
-.blog-card-footer {
+.blog-card-footer-problems {
     font-size: 0.875em;
     color: #777777;
 }
 
-.blog-card-action {
+.blog-card-action-problems {
     display: flex;
     justify-content: flex-end;
 }
 
-.join-contest-button {
+.join-contest-button-problems {
     background-color: #747474;
     color: #ffffff;
     border: none;
@@ -148,18 +148,18 @@ html, body {
     transition: background-color 0.3s;
 }
 
-.join-contest-button:hover {
+.join-contest-button-problems:hover {
     background-color: #000000;
 }
 
 @media (max-width: 900px) {
-    .blog-card {
+    .blog-card-problems {
         width: calc(50% - 20px); /* Two cards per row on smaller screens */
     }
 }
 
 @media (max-width: 600px) {
-    .blog-card {
+    .blog-card-problems {
         width: calc(100% - 20px); /* One card per row on small screens */
     }
 }

@@ -86,53 +86,53 @@ export default function StudentContests() {
   }, [searchQuery,dateFilter]);
   
   return (
-      <main className="content">
+      <main className="content-problems">
           <NavigationBarStudent />
-          <header className="blog-header">
+          <header className="blog-header-problems">
               <h1>Problems</h1>
               <p>Your journey to become a DBMS wizard starts here! </p>
-              <div className="tabs">
-                  <span className="tab active">Database</span>
-                  <span className="tab">Queries</span>
-                  <span className="tab">Joins</span>
-                  <span className="tab">Indexes</span>
-                  <span className="tab">Transactions</span>
-                  <span className="tab">Constraints</span>
-                  <span className="tab">Normalization</span>
-                  <span className="tab">Functions</span>
+              <div className="tabs-problems">
+                  <span className="tab-problems active">Database</span>
+                  <span className="tab-problems">Queries</span>
+                  <span className="tab-problems">Joins</span>
+                  <span className="tab-problems">Indexes</span>
+                  <span className="tab-problems">Transactions</span>
+                  <span className="tab-problems">Constraints</span>
+                  <span className="tab-problems">Normalization</span>
+                  <span className="tab-problems">Functions</span>
               </div>
 
-              <div className="input-container">
+              <div className="input-container-problems">
     <input
         type="text"
-        className="search-bar"
+        className="search-bar-problems"
         placeholder="Search..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
     />
     <input
         type="date"
-        className="date-filter"
+        className="date-filter-problems"
         value={dateFilter}
         onChange={(e) => setDateFilter(e.target.value)}
     />
 </div>
           </header>
           
-          <section className="blog-section">
+          <section className="blog-section-problems">
               {filteredPosts.map((post, index) => (
-                  <div key={index} className="blog-card">
-                      <div className="blog-card-header">
+                  <div key={index} className="blog-card-problems">
+                      <div className="blog-card-header-problems">
                           <h2>{post.title}</h2>
                       </div>
-                      <div className="blog-card-body">
+                      <div className="blog-card-body-problems">
                           <p>{post.description}</p>
                       </div>
-                      <div className="blog-card-footer">
+                      <div className="blog-card-footer-problems">
                           <span>{post.date}</span> &middot; <span>{post.readTime}</span>
                       </div>
-                      <div className="blog-card-action">
-                          <button className="join-contest-button">Submit Solution</button>
+                      <div className="blog-card-action-problems">
+                          <button className="join-contest-button-problems">Submit Solution</button>
                       </div>
                   </div>
               ))}
